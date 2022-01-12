@@ -162,11 +162,9 @@ function mainIntroSlideByDragMove() {
 }
 
 /* popular category start */
-let popularWrapper = document.getElementsByClassName("popular__details--wrapper")
+let popularWrapper = document.querySelectorAll("popular__details--wrapper")
 let popularImg = document.getElementsByClassName("popular__details--main");
 let bgEffect = document.getElementsByClassName("dark-bg-disable");
-const abc = Array.from(popularWrapper)
-console.log(abc);
 const PopularCateEffect = index => {
     popularImg[index].classList.add("details__items--imgScaleX");
     bgEffect[index].classList.add("dark-bg-enable");
@@ -175,7 +173,7 @@ const disablePopularCateEffect = index => {
     popularImg[index].classList.remove("details__items--imgScaleX");
     bgEffect[index].classList.remove("dark-bg-enable");
 }
-popularWrapper.map((item, index) => {
+popularWrapper.forEach((item, index) => {
     item.addEventListener("mouseover", () => { PopularCateEffect(index) })
     item.addEventListener("mouseout", () => { disablePopularCateEffect(index) })
 })
