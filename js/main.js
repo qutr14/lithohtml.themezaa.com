@@ -175,7 +175,7 @@ const disablePopularCateEffect = index => {
     popularImg[index].classList.remove("details__items--imgScaleX");
     bgEffect[index].classList.remove("dark-bg-enable");
 }
-abc.forEach((item, index) => {
+popularWrapper.forEach((item, index) => {
     item.addEventListener("mouseover", () => { PopularCateEffect(index) })
     item.addEventListener("mouseout", () => { disablePopularCateEffect(index) })
 })
