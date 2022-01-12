@@ -162,7 +162,7 @@ function mainIntroSlideByDragMove() {
 }
 
 /* popular category start */
-let popularWrapper = document.querySelectorAll("popular__details--wrapper")
+let popularWrapper = document.querySelectorAll(".popular__details--wrapper")
 let popularImg = document.getElementsByClassName("popular__details--main");
 let bgEffect = document.getElementsByClassName("dark-bg-disable");
 const PopularCateEffect = index => {
